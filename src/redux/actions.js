@@ -13,3 +13,27 @@ export const removeCar = (index) => {
         value: index
     }
 }
+
+export const removeMake = (index) => {
+  return {
+      type: 'REMOVE_MAKE',
+      value: index
+  }
+}
+
+
+
+export const fetchMakes = () => {
+    return (dispatch) => {
+      fetch(url)
+        .then(res => res.json())
+        .then(response => {
+          const action = {
+            type: 'FETCH_MAKES',
+            value: response.Results
+          }
+          console.log(action)
+          dispatch(action)
+        })
+    }
+  }

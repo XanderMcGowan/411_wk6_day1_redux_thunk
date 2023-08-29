@@ -1,6 +1,7 @@
 export default {
+   makes: [],
     user: {
-        username: 'test-user-1',
+        username: 'Xander',
         email: 'test-user@example.com'
     },
     cars: [
